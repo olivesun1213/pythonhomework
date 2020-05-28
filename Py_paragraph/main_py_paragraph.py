@@ -1,23 +1,17 @@
 
-
-#open paragraph txt
-
 import os
-textfile=os.path.join('.', 'Resources', 'paragraph.txt')
-with open(textfile) as f:
-    content=f.read
-
-# count number of word
-word_count = len(content.split()) 
 print("Paragraph Analysis")
 print("---------------------------")
-print('Approximate word conut:',str(word_count))
+#import and read file
+textfile=os.path.join('.', 'Resources', 'paragraph.txt')
+f=open(textfile,'r')
 
-# count the number of sentence by counting . in the paragrap
-with open(textfile)as f:
-    data=f.read()
-    print('Total Sentences:', data.count('.'))
-
+# count number of words and number of sentences by counting space and .
+with open(textfile) as f:
+    content=f.read()
+    wordcount=len(content.split())
+    print('Approximate word conut:',str(wordcount))
+    print('Total Sentences:', content.count('.'))
 
 # split paragraph into words
 words=content.split()
@@ -29,7 +23,6 @@ average_length=sum(lengths)/len(lengths)
 formatted_length_average="{:.1f}".format(average_length)
 
 print('Average letter count:', formatted_length_average )
-
 countword=[]
 with open(textfile)as f:
     txt=f.read()
