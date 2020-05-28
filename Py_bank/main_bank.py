@@ -2,7 +2,7 @@
 import os 
 import csv
 
-csvpath = os.path.join('..', 'Resources', 'bank.csv')
+csvpath = os.path.join('.', 'Resources', 'bank.csv')
 # read csv file as a list of lists
 with open(csvpath) as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=',')
