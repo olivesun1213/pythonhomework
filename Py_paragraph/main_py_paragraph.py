@@ -1,7 +1,7 @@
-
+f=open('paragraph_analysis.txt',"a")
 import os
-print("Paragraph Analysis")
-print("---------------------------")
+print("Paragraph Analysis",file=f)
+print("---------------------------",file=f)
 #import and read file
 textfile=os.path.join('.', 'Resources', 'paragraph.txt')
 f=open(textfile,'r')
@@ -10,7 +10,7 @@ f=open(textfile,'r')
 with open(textfile) as f:
     content=f.read()
     wordcount=len(content.split())
-    print('Approximate word conut:',str(wordcount))
+    print('Approximate word conut:',str(wordcount),file=f)
     print('Total Sentences:', content.count('.'))
 
 # split paragraph into words
@@ -22,7 +22,7 @@ average_length=sum(lengths)/len(lengths)
 #format average length
 formatted_length_average="{:.1f}".format(average_length)
 
-print('Average letter count:', formatted_length_average )
+print('Average letter count:', formatted_length_average,file=f )
 countword=[]
 with open(textfile)as f:
     txt=f.read()
@@ -33,4 +33,5 @@ with open(textfile)as f:
 average_countword=sum(countword)/len(countword)
 #format to one decimal place
 formatted_average="{:.1f}".format(average_countword)
-print('Average Sentence Length:',formatted_average)
+print('Average Sentence Length:',formatted_average,file=f)
+f.close
