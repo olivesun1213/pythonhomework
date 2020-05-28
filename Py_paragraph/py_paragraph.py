@@ -1,4 +1,8 @@
+
+
 #open paragraph txt
+
+import os
 textfile=os.path.join('.', 'Resources', 'paragraph.txt')
 with open(textfile) as f:
     content=f.read
