@@ -1,0 +1,7 @@
+
+Paragraph Analysis
+---------------------------
+Approximate word conut: 63
+Total Sentences: 3
+Average letter count: 5.3
+Average Sentence Length: 15.8
