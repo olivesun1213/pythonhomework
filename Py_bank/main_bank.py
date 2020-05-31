@@ -21,7 +21,7 @@ print("Total Months:" + str(total_month),file=f)
 #calculate total volume
 volume= []
 #convert profit/loss into integer
-for row in list_of_rows[1:]:
+for row in list_of_rows:
     volume.append(int(row[1]))
 #sum all volume
 vol_sum = sum(volume)
